@@ -1,0 +1,29 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin: 100px;
+    padding: 10px;
+    text-align: center;
+    color: lightgrey;
+    background-color: gray;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;;
+    font-size: 42px;
+    margin: 25px;
+    padding: 10px;
+
+}
+
+footer {
+    position: absolute;
+    bottom: 15px;
+    margin-left: 40%;
+    color: darkgrey;
+}
+
+p {
+    margin-top: 8px;
+}
