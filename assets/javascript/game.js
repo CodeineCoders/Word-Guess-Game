@@ -10,8 +10,14 @@ var guesses = 0;
 
 document.onkeyup = function(event) {
 
-var playerGuesses = (event.key).toLowerCase;
+var playerGuesses = event.key.toLowerCase();
 
-var compGuesses = letters[Math.floor(Math.random() * letters.length)];
+var compGuesses = letters[Math.floor(Math.random() * letters.length)]
     console.log(compGuesses);
+
+if (playerGuesses === compGuesses) {
+    alert('You guessed right!!');
+    console.log(playerGuesses);
+}
+
 }
