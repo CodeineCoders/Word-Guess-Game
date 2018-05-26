@@ -22,8 +22,8 @@ document.onkeyup = function (event) {
     }
 
     if (playerGuesses == compGuesses) {
-        alert('You guessed right!!');
         document.getElementById('wins').innerHTML = ('Wins: ' + wins++);
+        alert('You guessed right!!');
         alert('Play Again ?');
         reset();
         console.log(playerGuesses);
@@ -34,9 +34,9 @@ document.onkeyup = function (event) {
         document.getElementById('guesses').innerHTML = ('Your Guesses so far: ' + GuessArr + (','));
     }
 
-    if (guessesLeft < 0) {
-        alert('You Lost, Play again? ');
+    if (guessesLeft == 0) {
         document.getElementById('losses').innerHTML = ('Losses: ' + losses++);
+        alert('You Lost, Play again? ');
         reset();
     }
 
