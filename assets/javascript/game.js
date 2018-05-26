@@ -13,9 +13,11 @@ console.log(compGuesses);
 document.onkeyup = function (event) {
 
     var playerGuesses = event.key.toLowerCase();
+    GuessArr.push(playerGuesses);
 
     var reset = function () {
         guessesLeft = 9;
+        GuessArr = [];
 
     }
 
@@ -29,11 +31,10 @@ document.onkeyup = function (event) {
 
     else if (playerGuesses != compGuesses) {
         document.getElementById('guessLeft').innerHTML = ('Guesses Left: ' + guessesLeft--);
-        document.getElementById('guesses').innerHTML = ('Your Guesses so far: ' + playerGuesses);
-
+        document.getElementById('guesses').innerHTML = ('Your Guesses so far: ' + GuessArr + (','));
     }
 
-    if (guessesLeft == 0) {
+    if (guessesLeft < 0) {
         alert('You Lost, Play again? ');
         document.getElementById('losses').innerHTML = ('Losses: ' + losses++);
         reset();
